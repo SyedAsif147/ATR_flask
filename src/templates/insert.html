@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row style_new" style="margin-top: 40px">
+    <div class="col-sm-6">
+        <form method="POST">
+            <div class="form-group">
+              <label for="mfgname">Flight Number : </label>
+              <input type="text" name="fno" class="form-control" id="fnp">
+            </div>
+            <div class="form-group">
+              <label for="mfgpname">Airline : </label>
+              <input type="text" name="airline" class="form-control" id="airline">
+            </div>
+            <div class="form-group">
+              <label for="price">From : </label>
+              <input type="text" name="fplace" class="form-control" id="fplace">
+            </div>
+            <div class="form-group">
+              <label for="qty">To : </label>
+              <input type="text" name="tplace" class="form-control" id="tplace">
+            </div>
+            <div class="form-group">
+                <label for="mfgemail">Departure Time : </label>
+                <input type="text" name="dtime" class="form-control" id="dtime">
+            </div>
+            <div class="form-group">
+                <label for="ploc">Arrival Time : </label>
+                <input type="text" name="atime" class="form-control" id="atime">
+            </div>
+            <div class="form-group">
+                <label for="plink">Price : </label>
+                <input type="text" name="price" class="form-control" id="price">
+            </div>
+            <button type="submit" class="btn form-control btn-outline-light">Insert</button>
+        </form>
+    </div>
+</div>
+<br>
+<br>
+{% endblock %}

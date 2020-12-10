@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row style_new" style="margin-top: 40px">
+    <div class="col-sm-6">
+        <form method="POST">
+            {{ form.csrf_token }}
+            <div class="form-group">
+                <label for="pname">Passenger Name : </label>
+                <input type="text" name="pname" class="form-control" id="pname" required> 
+            </div>
+            <div class="form-group">
+                <label for="age">Age : </label>
+                <input type="text" name="age" class="form-control" id="age" required>
+            </div>
+            From:   
+            {{ form.fplace }}
+            &nbsp;&nbsp;&nbsp;
+            To:
+            {{ form.tplace }}
+            <br><br>
+
+            <div class="form-group">
+                <label for="nseats">No of Seats : </label>
+                <input type="text" name="nseats" class="form-control" id="nseats" required>
+              </div>
+              <br>
+              Airlines:
+              {{ form.airline }}
+              &nbsp;&nbsp;&nbsp;
+              Departure:
+              {{ form.dtime }}<br>
+            <br>
+            <button type="submit" class="btn form-control btn-outline-light">Book</button>
+        </form>
+    </div>
+</div>
+<br>
+<br>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row style_new" style="margin-top: 40px">
+    <div class="col-sm-6">
+        <form method="POST">
+            <div class="form-group">
+              <label for="fno">Flight No : </label>
+              <input type="text" name="fno" class="form-control" id="fno" value="{{ qs.flight_no }}">
+            </div>
+            <div class="form-group">
+              <label for="airline">Airline : </label>
+              <input type="text" name="airline" class="form-control" id="airline" value="{{ qs.airline }}">
+            </div>
+            <div class="form-group">
+              <label for="price">Price : </label>
+              <input type="text" name="price" class="form-control" id="price" value="{{ qs.price }}">
+            </div>
+            <div class="form-group">
+              <label for="from_place">From : </label>
+              <input type="text" name="from_place" class="form-control" id="from_place" value="{{ qs.from_place }}">
+            </div>
+            <div class="form-group">
+                <label for="to_place">To : </label>
+                <input type="text" name="to_place" class="form-control" id="to_place" value="{{ qs.to_place }}">
+            </div>
+            <div class="form-group">
+                <label for="d_time">Departure Time : </label>
+                <input type="text" name="d_time" class="form-control" id="d_time" value="{{ qs.d_time }}">
+            </div>
+            <div class="form-group">
+                <label for="a_time">Arrival Time : </label>
+                <input type="text" name="a_time" class="form-control" id="a_time" value="{{ qs.a_time }}">
+            </div>
+            <button type="submit" class="btn form-control btn-outline-light">Update</button>
+        </form>
+    </div>
+</div>
+<br>
+<br>
+{% endblock %}

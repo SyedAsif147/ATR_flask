@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block new_content %}
+<div class="container">
+{% if qs %}
+    <div class="card" style="width: 18rem;">
+        <div class="card-header">
+          <h3>Profile</h3>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Username: {{ qs.username }}</li>
+          <li class="list-group-item">First Name: {{ qs.first_name }}</li>
+          <li class="list-group-item">Last Name: {{ qs.last_name }}</li>
+          <li class="list-group-item">Email: {{ qs.email }}</li>
+          <li class="list-group-item">Phone Number: {{ qs.phone_number }}</li>
+          <li class="list-group-item">Address: {{ qs.address }}</li>
+          <li class="list-group-item">Admin Status: {{ qs.admin }}</li>
+        </ul>
+      </div>
+{% endif %}
+</div>
+{% endblock %}

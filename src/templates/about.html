@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block new_content %}
+<!-- Container (Contact Section) -->
+<div class="container">
+<div id="contact" class="container-fluid bg-grey">
+    <h2 class="text-center style_new">CONTACT</h2>
+    <div class="row style_new">
+      <div class="col-sm-5">
+        <p>Contact us and we'll get back to you within 24 hours.</p>
+          <p><span class="glyphicon glyphicon-map-marker" >&nbsp;&nbsp;&nbsp;<img src="/static/media/loc4.png" style="width: 15px;
+            height: 22px;"></span>&nbsp; Karnataka, India</p>
+        <p><span class="glyphicon glyphicon-phone">&nbsp;&nbsp;<img src="/static/media/phone.png" style="width: 20px;
+            height: 15px;"></span> +91 95677 56767</p>
+        <p><span class="glyphicon glyphicon-envelope">&nbsp;<img src="/static/media/email.png" style="width: 30px;
+            height: 30px;"></span> myemail@something.com</p>
+      </div>
+      <div class="col-sm-7 slideanim">
+        <div class="row">           
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          </div>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          </div>
+        </div>
+        <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <button class="btn btn-outline-light pull-right" type="submit">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+{% endblock %}

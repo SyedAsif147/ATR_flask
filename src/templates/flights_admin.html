@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block new_content %}
+<div class="container">
+{% if qs %}
+    {% for i in qs.items %}
+    <article class="media content-section">
+    <table cellpadding="5" >
+      <tr>
+        <td style="padding:0 15px;"> <h2> <a class="alert-link text-info" href="/flight-get/{{ i.flight_no }}">{{ i.flight_no }} </a><br>
+        <small class="lead">From: {{ i.from_place }} To: {{ i.to_place }}</small> </h2></td>
+        {% if session['admin'] %}
+        <td style="padding:0 15px;"> <a href="/flight-get/update/{{ i.flight_no }}" class="btn btn-outline-secondary">Edit</a></td>
+        <td style="padding:0 15px;"> <a href="/flight-get/delete/{{ i.flight_no }}" class="btn btn-outline-danger">Delete</a></td>
+        {% endif %}
+      </tr>
+    </table>
+    </article>
+    {% endfor %}
+    {% for page in qs.iter_pages(left_edge=3, right_edge=3, left_current=3, right_current=3) %}
+      {% if page %}
+        <a href="{{ url_for('flights_all', page_num=page) }}" class="btn btn-outline-light">{{ page }}</a>
+      {% else %}  
+      ...
+      {% endif %}
+    {% endfor %}
+    <br>
+{% else %}
+<h3>Airlines data not found</h3>
+{% endif %}
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+# Env files
+.vscode
+Lib
+Scripts
+pyvenv.cfg
+__pycache__
+
+# compile files
+*.pyc

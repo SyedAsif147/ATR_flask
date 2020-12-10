@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block new_content %}
+<div class="container">
+{% if qs %}
+    <div class="card" style="width: 18rem;">
+        <div class="card-header">
+          Flight: {{ fno }}
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Passenger: {{ qs.p_name }}</li>
+          <li class="list-group-item">Age: {{ qs.age }}</li>
+          <li class="list-group-item">No. of Seats: {{ qs.no_seats }}</li>
+          <li class="list-group-item">Airline: {{ airline }}</li>
+          <li class="list-group-item">Price: {{qs.payment}}</li>
+          <li class="list-group-item">From Place: {{ qs.from_place }}</li>
+          <li class="list-group-item">To Place: {{ qs.to_place }}</li>
+          <li class="list-group-item">Departure Time: {{ qs.d_time }}</li>
+          <li class="list-group-item">Arrival Time: {{ qs.a_time }}</li>
+        </ul>
+      </div>
+{% endif %}
+</div>
+{% endblock %}
